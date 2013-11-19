@@ -19,6 +19,8 @@ def main
     mod_text = upper_mod text
   when "--lower"
     mod_text = lower_mod text
+  when "--swapcase"
+  mod_text = swapcase_mod text
   else
     puts "ERROR: Unrecognized modifier!"
     exit
@@ -40,6 +42,10 @@ end
 
 def lower_mod input
   input.downcase
+end
+
+def swapcase_mod input
+  input.swapcase
 end
 
 # Call main method
